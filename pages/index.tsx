@@ -260,7 +260,7 @@ const Home: NextPageWithLayout = () => {
           <p className="text-neutral-500 text-2xl md:text-lg">
             Hello again! I'm Furkan. I'm 17 years old. Will be 18 in 5 months. I
             started learning to code in 2019 with some Discord Bot tutorials.
-            And I began to loving coding. In 2020 during pandemic, I started to
+            And I began to love coding. In 2020 during pandemic, I started to
             learn HTML5, CSS3 and ReactJS. I'm learning Web3 basics and Solidity
             programming language right now. Will be more active and productive
             on summer.
