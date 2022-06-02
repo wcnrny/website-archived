@@ -10,7 +10,7 @@ import { VscGithubAlt } from "react-icons/vsc";
 import { AiOutlineInstagram, AiOutlineReddit } from "react-icons/ai";
 import { FiTwitter, FiTarget } from "react-icons/fi";
 import { FaDiscord } from "react-icons/fa";
-import { SiBuymeacoffee } from "react-icons/si";
+import { SiBuymeacoffee, SiOnlyfans } from "react-icons/si";
 import { RiSnapchatLine } from "react-icons/ri";
 
 interface cards {
@@ -75,6 +75,12 @@ const Cards: cards[] = [
     description: "Wait, you wanna support me? Oh, thank you!!!",
     icon: <SiBuymeacoffee size={32} />,
     routeUrl: "https://www.buymeacoffee.com/wcnrnyofficial",
+  },
+  {
+    title: "OnlyFans 🤨",
+    description: "Hehehe, I'm not gonna post any nsfw posts. That's troll.",
+    icon: <SiOnlyfans size={32} />,
+    routeUrl: "https://onlyfans.com/wcnrny",
   },
 ];
 
