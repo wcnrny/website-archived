@@ -7,6 +7,7 @@ import React from "react";
 interface NavbarLinks {
   title: string;
   route: string;
+  active: boolean;
 }
 
 const Drawer = ({ opened, setOpened }: { opened: boolean; setOpened: any }) => {
@@ -14,18 +15,27 @@ const Drawer = ({ opened, setOpened }: { opened: boolean; setOpened: any }) => {
     {
       title: "Home",
       route: "/",
+      active: true,
     },
     {
       title: "Personal Information",
       route: "/personal",
+      active: false,
     },
     {
       title: "Projects",
       route: "/projects",
+      active: true,
     },
     {
       title: "Contact",
       route: "/contact",
+      active: false,
+    },
+    {
+      title: "Music",
+      route: "/music",
+      active: true,
     },
   ];
   const router = useRouter();
@@ -47,10 +57,16 @@ const Drawer = ({ opened, setOpened }: { opened: boolean; setOpened: any }) => {
         <span className="text-white">Buttons will be activated soon!</span>
         {navbarLinks.map((e) => (
           <span
-            className="hover:text-white transition-all"
-            /*onClick={() => {
-              router.push(e.route);
-            }} */
+            className={`transition-all ${
+              e.active
+                ? "cursor-pointer text-white"
+                : "cursor-not-allowed text-neutral-500"
+            }`}
+            onClick={() => {
+              if (e.active) {
+                router.push(e.route);
+              } else return null;
+            }}
           >
             {e.title}
           </span>
