@@ -7,6 +7,7 @@ import Drawer from "../Drawer";
 interface NavbarLinks {
   title: string;
   route: string | URL;
+  active: boolean;
 }
 
 const Navbar = () => {
@@ -16,18 +17,22 @@ const Navbar = () => {
     {
       title: "Home",
       route: "/",
+      active: true,
     },
     {
       title: "Personal Information",
       route: "/personal",
+      active: false,
     },
     {
       title: "Projects",
       route: "/projects",
+      active: true,
     },
     {
       title: "Contact",
       route: "/contact",
+      active: false,
     },
   ];
 
@@ -35,7 +40,7 @@ const Navbar = () => {
     <>
       <div className="flex bg-neutral-900 flex-row justify-between max-h-[10vh] w-full">
         <div
-          className="navbar-brand flex flex-row items-center gap-4 p-8 cursor-pointer hover:scale-110 transition-all"
+          className="navbar-brand flex flex-row items-center gap-4 p-8 cursor-pointer hover:scale-110 transition-all select-none"
           onClick={() => {
             router.push("/");
           }}
@@ -56,10 +61,14 @@ const Navbar = () => {
             return (
               <a
                 key={e.title}
-                className="p-3 cursor-not-allowed hover:text-[#f7f7f7] rounded-xl transition-all hover:shadow-[0_0_10px_2px_#f7f7f7] select-none"
-                /* onClick={() => {
-                router.push(e.route);
-              }} */
+                className={`p-3 hover:text-[#f7f7f7] rounded-xl transition-all hover:shadow-[0_0_10px_2px_#f7f7f7] select-none ${
+                  e.active ? "cursor-pointer" : "cursor-not-allowed"
+                }`}
+                onClick={() => {
+                  if (e.active) {
+                    router.push(e.route);
+                  } else return null;
+                }}
               >
                 {e.title}
               </a>

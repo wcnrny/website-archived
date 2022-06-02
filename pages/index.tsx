@@ -16,7 +16,7 @@ import { RiSnapchatLine } from "react-icons/ri";
 interface cards {
   title: string;
   description: string;
-  icon: JSX.Element;
+  icon?: JSX.Element;
   routeUrl: string;
 }
 interface items {
@@ -230,7 +230,7 @@ const Home: NextPageWithLayout = () => {
         </h1>
         <p className="text-gray-500 text-2xl w-[70%] md:w-full">
           Welcome! I am Furkan. I am a front-end developer that loves creating.
-          I'm based on Turkey, Eskişehir. You can look up my projects, contact
+          I'm based in Turkey, Eskişehir. You can look up my projects, contact
           with me, look what I like to do, what I like to listen etc.
         </p>
       </div>
@@ -241,6 +241,7 @@ const Home: NextPageWithLayout = () => {
         <h1 className="text-4xl text-montserrat text-neutral-600">
           About Me and My Socials
         </h1>
+        <br />
         <div className="grid grid-cols-2 grid-rows-[auto] gap-5 md:flex md:flex-col">
           {Cards.map((e) => (
             <Card
@@ -253,10 +254,11 @@ const Home: NextPageWithLayout = () => {
         </div>
       </div>
       <div className="h-auto bg-neutral-900 container pl-32 pt-10 pr-32 pb-10 md:pr-10 md:pl-10 md:h-auto flex flex-col gap-10">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col">
           <h1 className="text-4xl text-white select-none md:text-2xl">
             • Who are you actually?
           </h1>
+          <br />
           <p className="text-neutral-500 text-2xl md:text-lg">
             Hello again! I'm Furkan. I'm 17 years old. Will be 18 in 5 months. I
             started learning to code in 2019 with some Discord Bot tutorials.
@@ -266,10 +268,11 @@ const Home: NextPageWithLayout = () => {
             on summer.
           </p>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col">
           <h1 className="text-4xl text-white select-none md:text-2xl">
             • What's your skills?
           </h1>
+          <br />
           <div className="text-neutral-500 text-2xl grid grid-cols-2 grid-rows-[auto] gap-4 justify-items-center md:flex md:flex-col">
             {Items.map((e) => (
               <a
@@ -284,10 +287,11 @@ const Home: NextPageWithLayout = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col">
           <h1 className="text-4xl text-white select-none md:text-2xl">
             • What did you do so far?
           </h1>
+          <br />
           <p className="text-neutral-500 text-2xl md:text-lg">
             I couldn't do it anything so far because of some problems. Like
             school exams. Will complete the projects that I made it to halfway

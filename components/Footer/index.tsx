@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { useRouter } from "next/router";
 import React from "react";
 import {
@@ -14,24 +15,33 @@ const Footer4 = () => {
       <div className="flex flex-col items-center justify-center">
         <div className="text-white text-3xl cursor-default">wcnrny</div>
         <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8">
-          <a
-            href="#about"
+          <span
             className="hover:text-gray-500 text-base cursor-pointer leading-4 text-white select-none"
+            onClick={() => {
+              router.push("/#about");
+            }}
           >
             About
-          </a>
+          </span>
           <p className="hover:text-gray-500 text-base cursor-not-allowed leading-4 text-white select-none">
             Contact me
           </p>
-          <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-white select-none">
+          <span
+            onClick={() => {
+              router.push("/projects");
+            }}
+            className="hover:text-gray-500 text-base cursor-pointer leading-4 text-white select-none"
+          >
             Projects
-          </p>
-          <a
-            href="https://github.com/wcnrny/website"
+          </span>
+          <span
+            onClick={() => {
+              router.push("https://github.com/wcnrny/website");
+            }}
             className="hover:text-gray-500 text-base cursor-pointer leading-4 text-white select-none"
           >
             Source Code of this website
-          </a>
+          </span>
         </div>
         <div className="flex items-center gap-x-8 mt-6">
           <div
