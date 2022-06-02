@@ -34,11 +34,16 @@ const Navbar = () => {
       route: "/contact",
       active: false,
     },
+    {
+      title: "Music",
+      route: "/music",
+      active: true,
+    },
   ];
 
   return (
     <>
-      <div className="flex bg-neutral-900 flex-row justify-between max-h-[10vh] w-full">
+      <div className="flex bg-neutral-900 flex-row justify-between !max-h-[10vh] w-full">
         <div
           className="navbar-brand flex flex-row items-center gap-4 p-8 cursor-pointer hover:scale-110 transition-all select-none"
           onClick={() => {

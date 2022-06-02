@@ -31,7 +31,7 @@ const Drawer = ({ opened, setOpened }: { opened: boolean; setOpened: any }) => {
   const router = useRouter();
   return (
     <div
-      className={`top-0 right-0 fixed w-full transition-all h-full bg-neutral-900 text-center flex flex-col justify-between text-white gap-5 text-2xl p-10 ${
+      className={`top-0 right-0 fixed w-full transition-all h-full bg-neutral-900 text-center flex flex-col justify-between text-white gap-5 text-2xl p-10 z-22  ${
         opened ? "translate-x-0" : "translate-x-full"
       }`}
     >

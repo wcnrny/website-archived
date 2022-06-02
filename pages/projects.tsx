@@ -5,6 +5,7 @@ import { ReactElement } from "react";
 import Card from "../components/Card";
 import Layout from "../components/Layout";
 import { RiSnapchatLine } from "react-icons/ri";
+import Head from "next/head";
 
 interface cards {
   title: string;
@@ -51,6 +52,9 @@ const Cards: cards[] = [
 const Projects = () => {
   return (
     <>
+      <Head>
+        <title>wcnrny - My Projects</title>
+      </Head>
       <div className="md:h-auto h-screen bg-neutral-900 flex flex-col items-center p-10 md:p-5 gap-5">
         <h1 className="text-white text-4xl md:text-2xl">Projects I Made</h1>
         <div className="grid grid-cols-2 grid-rows-[auto] justify-items-center gap-5 md:flex md:flex-col">
