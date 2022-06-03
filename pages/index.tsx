@@ -234,6 +234,7 @@ const Home: NextPageWithLayout = () => {
           </a>{" "}
           developer
         </h1>
+        <br />
         <p className="text-gray-500 text-2xl w-[70%] md:w-full">
           Welcome! I am Furkan. I am a front-end developer that loves creating.
           I'm based in Turkey, Eskişehir. You can look up my projects, contact
