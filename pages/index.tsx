@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
-import { ReactElement } from "react";
+import { ReactElement, useMemo } from "react";
 import Card from "../components/Card";
 import Layout from "../components/Layout";
 import { NextPageWithLayout } from "./_app";
@@ -24,6 +24,9 @@ interface items {
   iconUrl: string;
   routeUrl: string;
 }
+
+const Birthday = new Date(2004,11,12);
+
 const Cards: cards[] = [
   {
     title: "Repositories",
@@ -214,6 +217,7 @@ const Items: items[] = [
 ];
 
 const Home: NextPageWithLayout = () => {
+  const age = useMemo(() => Math.floor((Date.now() - Birthday.getTime()) / YEAR_MILLIS), []);
   return (
     <div>
       <Head>
@@ -267,7 +271,7 @@ const Home: NextPageWithLayout = () => {
           </h1>
           <br />
           <p className="text-neutral-500 text-2xl md:text-lg">
-            Hello again! I'm Furkan. I'm 17 years old. Will be 18 in 5 months. I
+            Hello again! I'm Furkan. I'm {age} years old. I
             started learning to code in 2019 with some Discord Bot tutorials.
             And I began to love coding. In 2020 during pandemic, I started to
             learn HTML5, CSS3 and ReactJS. I'm learning Web3 basics and Solidity
