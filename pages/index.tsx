@@ -24,7 +24,7 @@ interface items {
   iconUrl: string;
   routeUrl: string;
 }
-
+const YEAR_MILLIS = 31556952000;
 const Birthday = new Date(2004,11,12);
 
 const Cards: cards[] = [
