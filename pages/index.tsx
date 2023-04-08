@@ -79,12 +79,7 @@ const Cards: cards[] = [
     icon: <SiBuymeacoffee size={32} />,
     routeUrl: "https://www.buymeacoffee.com/wcnrnyofficial",
   },
-  {
-    title: "OnlyFans 🤨",
-    description: "Hehehe, I'm not gonna post any nsfw posts. That's troll.",
-    icon: <SiOnlyfans size={32} />,
-    routeUrl: "https://onlyfans.com/wcnrny",
-  },
+
 ];
 
 const Items: items[] = [
